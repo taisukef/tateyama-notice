@@ -1,0 +1,10 @@
+<body>
+<script src=https://fukuno.jig.jp/fukuno.js></script>
+<script>
+window.onload = async function() {
+	const notices = await (await fetch('notices.json')).json()
+	console.log(notices)
+	dump(notices) // fukuno.js
+}
+</script>
+</body>
