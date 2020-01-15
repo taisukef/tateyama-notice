@@ -1,10 +1,7 @@
-const rp = require('request-promise')
 const request = require('request')
 const cheerio = require('cheerio')
-const options = { transform: (body) => cheerio.load(body) }
-
-var Iconv = require('iconv').Iconv;
-var fs = require('fs');
+const Iconv = require('iconv').Iconv;
+const fs = require('fs');
 
 const get = function(url, fname) {
   request({url: url, encoding: null }, function (error, response, body) {
